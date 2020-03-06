@@ -11,10 +11,14 @@
       .container.has-text-centered
         h1.title MusicOn
         h2.subtitle Most hottest songs
+        mo-player
 </template>
 
 <script>
+import MoPlayer from '@/components/Player.vue';
+
 export default {
   name: 'Header',
+  components: { MoPlayer },
 };
 </script>
