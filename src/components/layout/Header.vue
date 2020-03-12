@@ -1,12 +1,18 @@
 <template lang="pug">
-  section.hero.is-success
+  section.hero.is-primary.is-small
     .hero-head
-      header.nav
+      nav.navbar
         .container
-          .nav-left
-            .nav-item
-              strong 📻 MusicOn
-          .nav-rigth.nav-menu
+          .navbar-brand
+            strong.navbar-item 📻 MusicOn
+            span.navbar-burger.burger(data-target="navbarMenuHeroA")
+              span
+              span
+              span
+          #navbarMenuHeroA.navbar-menu
+            .navbar-end
+              router-link.navbar-item(:to="{ name: 'search' }") Search
+              router-link.navbar-item(to="about") About Us
     .hero-body
       .container.has-text-centered
         h1.title MusicOn
