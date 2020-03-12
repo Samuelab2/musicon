@@ -54,7 +54,6 @@ export default {
       this.isLoading = true;
       this.getTrackById({ id })
         .then(() => {
-          console.log('track loaded');
           this.isLoading = false;
         });
     }
